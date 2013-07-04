@@ -109,7 +109,7 @@
 		244414A7173EBB320046D993 /* DCTAuth.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTAuth.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		244414A8173EBB320046D993 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		244414AC173EBB320046D993 /* DCTAuthBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTAuthBundle-Info.plist"; sourceTree = "<group>"; };
-		244414B9173EBC3A0046D993 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		244414B9173EBC3A0046D993 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2454C24616D8BD4500E97367 /* _DCTOAuth2Credential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTOAuth2Credential.h; sourceTree = "<group>"; };
 		2454C24716D8BD4500E97367 /* _DCTOAuth2Credential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTOAuth2Credential.m; sourceTree = "<group>"; };
 		2455D717163BE5E800BC6FD7 /* DCTAuthAccountSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTAuthAccountSubclass.h; sourceTree = "<group>"; };
@@ -407,7 +407,6 @@
 				24FA8FE015E93D8E00E1ED99 /* Sources */,
 				24FA8FE115E93D8E00E1ED99 /* Frameworks */,
 				24FA8FE215E93D8E00E1ED99 /* CopyFiles */,
-				2416D3C2171BF6600039DE01 /* Build Documentation */,
 			);
 			buildRules = (
 			);
@@ -513,20 +512,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2416D3C2171BF6600039DE01 /* Build Documentation */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Build Documentation";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "docsetutil=`xcrun --find docsetutil`\nbuild=\"${BUILT_PRODUCTS_DIR}/${TARGET_NAME}/docset\"\n\nhash /usr/local/bin/appledoc 2>/dev/null || exit 0;\n\n/usr/local/bin/appledoc \\\n--install-docset \\\n--project-name \"${TARGET_NAME}\" \\\n--project-company \"Daniel Tull\" \\\n--company-id uk.co.danieltull \\\n--exit-threshold 1000 \\\n--clean-output \\\n-o \"$build\" \\\n\"${PROJECT_DIR}\" &\n";
-		};
 		24FA8FF315E93D8E00E1ED99 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -847,6 +832,7 @@
 				244414B2173EBB320046D993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24FA8FDE15E93D8E00E1ED99 /* Build configuration list for PBXProject "DCTAuth" */ = {
 			isa = XCConfigurationList;
